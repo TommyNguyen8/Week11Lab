@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS `notesdb`.`user` (
   `last_name` VARCHAR(20) NOT NULL,
   `password` VARCHAR(20) NOT NULL,
   `role` INT(11) NOT NULL,
+  `reset_password_uuid` VARCHAR(50),
   PRIMARY KEY (`email`),
   CONSTRAINT `fk_user_role`
     FOREIGN KEY (`role`)
@@ -47,3 +48,4 @@ INSERT INTO `note` (`Title`, `Contents`, `Owner`)
     VALUES ('Another quote', '"Java is to JavaScript as ham is to hamster." -  Jeremy Keith', 'cprg352+anne@gmail.com');
 INSERT INTO `note` (`Title`, `Contents`, `Owner`)
     VALUES ('Barb''s Note', 'Anne should not see this note.', 'cprg352+barb@gmail.com');
+
